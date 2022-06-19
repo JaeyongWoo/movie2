@@ -31,13 +31,21 @@
     //     cilck me{" "}
     //   </button>
     // );
+    let counter = 0;
+    function render() {
+      ReactDOM.render(<Container />, root);
+    }
+    function countUp() {
+      counter = counter + 1;
+      render();
+    }
     const Container = () => (
       <div>
-        <h3>total click : 0 </h3>
-        <button>click me </button>
+        <h3>total click : {counter} </h3>
+        <button onClick={countUp}>click me </button>
       </div>
     );
     // 항상대문자 중요
-    ReactDOM.render(Container, root);
+    render();
   </script>
 </html>
