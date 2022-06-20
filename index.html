@@ -10,6 +10,7 @@
 
   <script type="text/babel">
     const root = document.getElementById("root");
+
     // const Title = () => (
     //   <h3 id="title" onMouseEnter={() => console.log("1")}>
     //     hello
@@ -31,21 +32,36 @@
     //     cilck me{" "}
     //   </button>
     // );
-    let counter = 0;
-    function render() {
-      ReactDOM.render(<Container />, root);
-    }
+
     function countUp() {
       counter = counter + 1;
       render();
     }
-    const Container = () => (
-      <div>
-        <h3>total click : {counter} </h3>
-        <button onClick={countUp}>click me </button>
-      </div>
-    );
+    
+
+    fuction App() {
+      return (
+        <div>
+      )
+    }
+
+
+
+
+    //~3.4
+    // function App() {
+    //   const [counter, modifier] = React.useState(6);
+    //   const onClick = () => {
+    //     modifier((current) => current + 1);
+    //   };
+    //   return (
+    //     <div>
+    //       <h3>total click : {counter}</h3>
+    //       <button onClick={onClick}>click me </button>
+    //     </div>
+    //   );
+    // }
     // 항상대문자 중요
-    render();
+    ReactDOM.render(<App />, root);
   </script>
 </html>
